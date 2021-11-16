@@ -1,0 +1,8 @@
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+@include font-face("Volkhov Bold 700", "/wp-content/themes/butgetkit_theme/src/fonts/Volkhov-Bold");
+@include font-face("Poppins SemiBold 600", "/wp-content/themes/butgetkit_theme/src/fonts/Poppins-SemiBold");
+@include font-face("Poppins Medium 500", "/wp-content/themes/butgetkit_theme/src/fonts/Poppins-Medium");

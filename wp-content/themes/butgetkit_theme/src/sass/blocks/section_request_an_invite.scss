@@ -1,0 +1,167 @@
+.section_request_an_invite{
+    position: relative;
+    padding-bottom: 50px;
+
+    &-content{
+        position: relative;
+        background: #F8F7FE url(../../images/request-bg.svg) no-repeat bottom left;
+        padding: 40px 20px;
+        border-radius: 50px 0px 30px 30px;
+        margin-bottom: 40px;
+        background-size: 110%;
+
+        @media (min-width: $tablet768) {
+            padding: 50px;
+            background-size: inherit;
+        }
+
+        @media (min-width: $desc1025) {
+            padding: 80px 140px;
+        }
+
+        @media (min-width: $desc1440) {
+            padding: 80px 200px;
+            
+        }
+
+        img{
+            position: absolute;
+            z-index: 9;
+            top: -20px;
+            right: -10px;
+            width: 55px;
+            height: 55px;
+
+            @media (min-width: $tablet768) {
+                width: 65px;
+                height: 65px;
+            }
+    
+            @media (min-width: $desc1025) {
+                width: 70px;
+                height: 70px;
+                right: -20px;
+            }
+
+            @media (min-width: $desc1440) {
+                width: 96px;
+                height: 96px;
+            }
+        }
+    }
+
+    &-title{
+        font-size: 32px;
+        line-height: 40px;
+        color: #181E4B;
+        font-family: $volkovBold;
+        color: #181E4B;
+        margin-bottom: 25px;
+
+        @media (min-width: $tablet768) {
+            font-size: 36px;
+            line-height: 47px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: $desc1025) {
+            font-size: 45px;
+            line-height: 57px;
+        }
+
+        @media (min-width: $desc1440) {
+            font-size: 50px;
+            line-height: 64px;
+        }
+    }
+
+    &-btn{
+        margin-top: 25px;
+
+        @media (min-width: $tablet768) {
+            margin-top: 30px;
+        }
+
+        @media (min-width: $desc1025) {
+            max-width: 360px;
+        }
+    }
+
+    &-desc{
+        font-size: 16px;
+        line-height: 24px;
+
+        @media (min-width: $tablet768) {
+            font-size: 17px;
+            line-height: 26px;
+        }
+
+        @media (min-width: $desc1025) {
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        @media (min-width: $desc1440) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    &-text{
+        @media (min-width: $desc1025) {
+            max-width: 670px;
+        }
+
+        @media (min-width: $desc1440) {
+            max-width: 900px;
+
+            p{
+                max-width: 800px;
+            }
+        }
+    }
+
+    &-button{
+        font-size: 22px;
+        line-height: 32px;
+        font-family: $poppinsSemiBold600;
+        color: rgba(24, 30, 75, 0.7);
+        display: inline-flex;
+        position: relative;
+        padding-right: 50px;
+
+        @media (min-width: $tablet768) {
+            font-size: 24px;
+            line-height: 33px;
+            padding-right: 70px;
+        }
+
+        @media (min-width: $desc1440) {
+            font-size: 29px;
+            line-height: 40px;
+        }
+
+        @media (min-width: $desc1025) {
+            font-size: 32px;
+            line-height: 44px;
+        }
+
+
+        svg{
+            margin-left: 20px;
+            width: 40px;
+            position: absolute;
+            top: 0px;
+            right: 0;
+
+            @media (min-width: $tablet768) {
+                width: 55px;
+                top: 0px;
+            }
+
+            @media (min-width: $desc1025) {
+                top: 8px;
+            }
+        }
+    }
+}

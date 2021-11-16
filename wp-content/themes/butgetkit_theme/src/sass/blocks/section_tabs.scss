@@ -1,0 +1,282 @@
+ .tabs {
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+
+    &-wrapper{
+        padding: 85px 0;
+        overflow: hidden;
+    }
+
+    &-header{
+        display: flex;
+        overflow-x: scroll;
+        position: relative;
+        z-index: 99;
+        width: 100%;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        &::-moz-scrollbar{
+            display: none;
+            width: 0px;
+            height: 0px;
+        }
+    }
+
+    &:after{
+        content: '';
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #EEF0F6;
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        z-index: -1;
+    }
+
+    button{
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1.16518px;
+        text-transform: uppercase;
+        color: rgba(94, 98, 130, 0.65);
+        position: relative;
+        padding: 10px 20px;
+        white-space: nowrap;
+
+        &.active{
+            color: #181E4B;
+
+            &:after{
+                width: 100%;
+                transition: width .3s ease, color .3s ease;
+            }
+        }
+
+        @media (min-width: $desc1025) {
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        @media (min-width: $desc1440) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            width: 0%;
+            background: #181E4B;
+            transition: width .3s ease, color .3s ease;
+        }
+    }
+
+    .tab {
+        display: none;
+    
+        h2{
+            text-transform: capitalize;
+            color: #181E4B;
+            font-family: $volkovBold;
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 30px;
+    
+            @media (min-width: $tablet768) {
+                font-size: 36px;
+                line-height: 47px;
+            }
+    
+            @media (min-width: $desc1025) {
+                font-size: 45px;
+                line-height: 57px;
+                margin-bottom: 40px;
+            }
+
+            @media (min-width: $desc1440) {
+                font-size: 50px;
+                line-height: 64px;
+            }
+        }
+    
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(24, 30, 75, 0.7);
+            margin-bottom: 40px;
+
+            @media (min-width: $tablet768) {
+                font-size: 17px;
+                line-height: 26px;
+            }
+
+            @media (min-width: $desc1025) {
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            @media (min-width: $desc1440) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    
+        span{
+            text-transform: uppercase;
+            color: rgba(24, 30, 75, 0.7);
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+
+            @media (min-width: $tablet768) {
+                font-size: 17px;
+                line-height: 26px;
+            }
+
+            @media (min-width: $desc1025) {
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            @media (min-width: $desc1440) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+        }
+    
+        i{
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.005em;
+            color: rgba(94, 98, 130, 0.65);
+            display: block;
+
+
+            @media (min-width: $tablet768) {
+                font-size: 13px;
+                line-height: 17px;
+            }
+
+            @media (min-width: $tablet768) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    &-content{
+        .tab{
+            &:first-child{
+                display: block;
+            }
+    
+            &-wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @media (min-width: $tablet768) {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+
+.tab{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $tablet768) {
+        flex-direction: row;
+    }
+
+    &-content{
+        background: $white;        
+        box-shadow: 0px 100px 80px rgba(86, 85, 121, 0.02), 0px 64.8148px 46.8519px rgba(86, 85, 121, 0.0151852), 0px 38.5185px 25.4815px rgba(86, 85, 121, 0.0121481), 0px 20px 13px rgba(86, 85, 121, 0.01), 0px 8.14815px 6.51852px rgba(86, 85, 121, 0.00785185), 0px 1.85185px 3.14815px rgba(86, 85, 121, 0.00481481);
+        border-radius: 10px;
+        padding: 20px;
+
+
+        @media (min-width: $tablet768) {
+            padding: 40px;
+        }
+    }
+
+    &-text{     
+        @media (min-width: $tablet768) {
+            max-width: 550px;
+        }
+        @media (min-width: $desc1440) {
+            max-width: 690px;
+        }
+    }
+
+    &-img{
+        flex-basis: 50%;
+        margin-top: 30px;
+
+            @media (min-width: $tablet768) {
+                margin-top: 0;
+            }
+
+            img{
+                width: 100%;
+                min-width: 320px;
+                max-width: 515px;
+                display: block;
+                margin: 0 0 0 auto;
+            }
+    }
+
+    &-link{
+        margin-top: 50px;
+        display: inline-block;
+        position: relative;
+        font-size: 22px;
+        line-height: 32px;
+        padding-right: 60px;
+
+        @media (min-width: $tablet768) {
+            font-size: 24px;
+            line-height: 33px;
+        }
+
+        @media (min-width: $desc1025) {
+            max-width: 550px;
+            font-size: 29px;
+            line-height: 40px;
+        }
+
+        @media (min-width: $desc1440) {
+            font-size: 32px;
+            line-height: 44px;
+        }
+
+        svg{
+            position: absolute;
+            top: 5px;
+            right: 0;
+            margin: auto;
+        }
+    }
+}

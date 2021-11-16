@@ -1,0 +1,50 @@
+.btnBudget {
+  font-size: 18px;
+  line-height: 28px;
+  background: linear-gradient(124.01deg, #FB1F61 0.13%, #F35282 97.69%);
+  box-shadow: 0px 20px 35px rgba(86, 85, 121, 0.15);
+  border-radius: 0px 10px 10px 10px;
+  color: $white;
+  max-width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  transition: background .3s ease;
+  font-family: $poppinsSemiBold600;
+
+  @media (min-width: 350px) {
+    font-size: 21px;
+    line-height: 40px;
+  }
+
+
+  @media (min-width: $desc1025) {
+    font-size: 28px;
+    line-height: 40px;
+    max-width: 320px;
+    height: 95px;
+  }
+
+  @media (min-width: $desc1440) {
+    max-width: 360px;
+    width: 100%;
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  &:hover{
+    color: $white;
+    background: linear-gradient(127.59deg, #F35282 14.99%, #FB1F61 92.29%);
+    box-shadow: 0px 20px 35px rgba(86, 85, 121, 0.15);
+    transition: background .3s ease;
+  }
+}
+
+a{
+  &:hover{
+    color: inherit;
+  }
+}

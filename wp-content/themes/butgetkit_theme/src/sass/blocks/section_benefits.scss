@@ -1,0 +1,144 @@
+.benefits{
+    padding: 50px 0;
+    background: #F8F7FE url(../../images/benefits_bg.png) no-repeat bottom right;
+    background-size: 70%;
+    position: relative;
+    background-size: contain;
+
+    @media (min-width: $tablet768) {
+        background-position: bottom 100px right;
+    }
+
+    &_img{
+        position: absolute;
+        bottom: 3%;
+        left: -30%;
+        right: 0;
+        margin: auto;
+        z-index: 0;
+        display: none;
+
+        @media (min-width: $desc1025) {
+            display: block;
+        }
+    }
+
+    @media (min-width: $tablet768) {
+        padding: 100px 0 50px 0;
+    }
+
+    .title-bold-50{
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        color: $black;
+    }
+
+    &_list{
+        display: flex;
+        justify-content: space-between;
+        margin: 65px -20px 0 -20px;
+        padding-bottom: 100px;
+
+        overflow-x: scroll;
+        position: relative;
+        z-index: 9;
+        
+        @media (min-width: $desc1025) {
+            overflow-x: none;
+        }
+        
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        &-item{
+            flex-basis: 33.3%;
+            padding: 0 20px;
+            min-width: 320px;
+
+            &:nth-child(2){
+                .benefits_list-item-content{
+                    background: $white;
+                    box-shadow: 0px 100px 80px rgba(86, 85, 121, 0.02), 0px 64.8148px 46.8519px rgba(86, 85, 121, 0.0151852), 0px 38.5185px 25.4815px rgba(86, 85, 121, 0.0121481), 0px 20px 13px rgba(86, 85, 121, 0.01), 0px 8.14815px 6.51852px rgba(86, 85, 121, 0.00785185), 0px 1.85185px 3.14815px rgba(86, 85, 121, 0.00481481);
+                }
+            }
+
+            &-content{
+                border-radius: 40px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                height: 100%;
+
+                @media (min-width: $tablet768) {
+                    padding: 50px;
+                }
+
+                @media (min-width: $desc1025) {
+                    padding: 100px 50px;
+                }
+    
+                @media (max-width: $desc1024) { 
+                    background: $white;
+                    box-shadow: 0px 100px 80px rgba(86, 85, 121, 0.02), 0px 64.8148px 46.8519px rgba(86, 85, 121, 0.0151852), 0px 38.5185px 25.4815px rgba(86, 85, 121, 0.0121481), 0px 20px 13px rgba(86, 85, 121, 0.01), 0px 8.14815px 6.51852px rgba(86, 85, 121, 0.00785185), 0px 1.85185px 3.14815px rgba(86, 85, 121, 0.00481481);
+                }
+    
+                img{
+                    margin: 0 0 40px 0;
+                    display: block;
+                }
+
+                h3{
+                    color: #383761;
+                    font-size: 22px;
+                    line-height: 32px;
+
+                    @media (min-width: $tablet768) {
+                        font-size: 24px;
+                        line-height: 33px;
+                    }
+
+                    @media (min-width: $desc1025) {
+                        font-size: 29px;
+                        line-height: 40px;
+                    }
+
+                    @media (min-width: $desc1440) {
+                        font-size: 32px;
+                        line-height: 44px;
+                    }
+                }
+    
+                p{
+                    margin: 20px 0 0 0;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: rgba(24, 30, 75, 0.7);
+
+                    @media (min-width: $tablet768) {
+                        font-size: 17px;
+                        line-height: 26px;
+                    }
+
+                    @media (min-width: $desc1024) { 
+                        font-size: 18px;
+                        line-height: 27px;
+                    }
+
+                    @media (min-width: $desc1440) { 
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.idea/*
+.xml
+**/build
+**/node_modules
+**/DS_Store
+**/ai1wm-backups
+**/all-in-one-wp-migration
+**/w3-total-cache
+**/uploads
+**/debug.log
+**/pdf_generator/custom
+**/pdf_generator/vendor
+wp-config.php

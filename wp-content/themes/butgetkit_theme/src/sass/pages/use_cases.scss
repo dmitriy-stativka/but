@@ -1,0 +1,376 @@
+.use_cases_container{
+    position: relative;
+
+    &:before{
+        content: '';
+        max-width: 600px;
+        max-height: 860px;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/use-cases-bg.png) no-repeat;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transform: translate(0px, -10%);
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: #F8F7FE;
+        height: 450px;
+        transform: translate(0px, -25%);
+    }
+
+    .tab-content{
+        margin: 0 -30px;
+        background: transparent;
+        box-shadow: none;
+    }
+
+   
+
+    .nav{
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 12px 0;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .tabs{
+        .tabs-wrapper-more{
+            text-align: center;
+            color: #181E4B;
+            width: 100%;
+            max-width: 200px;
+            height: 60px;
+            font-size: 20px;
+            line-height: 30px;
+            text-transform: none;
+            border: 2px solid #181E4B;
+            box-shadow: 0px 20px 35px rgba(86, 85, 121, 0.15);
+            border-radius: 0px 10px 10px 10px;
+            display: block;
+            margin: 0 auto;
+            transition: color .3s ease, border-color .3s ease;
+
+            svg{
+                height: 25px;
+
+                path{
+                    fill: initial;
+                    transition: fill .1s ease-in-out;
+                }
+            }
+
+            &:hover{
+                color: $red;
+                border-color: $red;
+                transition: color .3s ease, border-color .3s ease;
+
+                svg{
+                    path{
+                        fill: $red;
+                        transition: fill .1s ease-in-out;
+                    }
+                }
+            }
+
+            @media (min-width: $tablet768) {
+                max-width: 300px;
+                height: 96px;
+                font-size: 32px;
+                line-height: 44px;
+
+                svg{
+                    height: 35px;
+                }
+            }
+        }
+    }
+
+}
+
+
+.tabs-wrapper{
+    .tab-pane{
+        &-link{
+            flex-basis: 100%;
+    
+            @media (min-width: $tablet768) {
+                flex-basis: 50%;
+                padding: 0 30px;
+                margin-bottom: 60px;
+            }
+            
+            @media (min-width: $desc1025) {
+                flex-basis: 33.3%;
+            }
+        }
+    }
+}
+
+.tab-pane{
+    &.active{
+        .list{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    }
+
+    &-link{
+        padding: 0 10px;
+        margin-bottom: 30px;
+        height: auto!important;
+
+        @media (min-width: $tablet768) {
+            padding: 0 30px;
+            margin-bottom: 60px;
+        }
+
+        &-content{
+            display: flex;
+            flex-direction: column;
+            background: #F8F7FE;
+            border-radius: 95px 40px 25px 25px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: none;
+            transition:  box-shadow .3s ease;
+
+            &:hover{
+                box-shadow: 0 10px 10px rgba(24, 30, 75, 0.1);
+                transition:  box-shadow .3s ease;
+            }
+        }
+        
+    }
+
+    &-img{
+        flex-basis: 210px;
+        height: 100%;
+
+        @media (min-width: $tablet768) {
+            flex-basis: 230px;
+        }
+
+        img{
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+
+            @media (min-width: $tablet768) {
+                height: 230px;
+            }
+        }
+    }
+
+    &-info{
+        flex-basis: 50%;
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (min-width: $tablet768) {
+            padding: 30px;
+        }
+
+        &-title{
+            font-size: 22px;
+            line-height: 32px;
+            color: #14183E;
+            font-family: $poppinsSemiBold600;
+            margin-bottom: 30px;
+            display: block;
+
+            @media (min-width: $tablet768) {
+                font-size: 28px;
+                line-height: 35px;
+            }
+
+            @media (min-width: $desc1440) {
+                font-size: 32px;
+                line-height: 44px;
+            }
+        }
+    }
+
+    &-author{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            @media (min-width: $desc1440) {
+                width: 65px;
+                height: 65px;
+            }
+        }
+
+        &-info{
+            padding-left: 15px;
+
+            @media (min-width: $desc1440) {
+                padding-left: 20px;
+            }
+
+            i{
+                font-size: 12px;
+                line-height: 16px;
+                color: rgba(94, 98, 130, 0.65);
+                display: block;
+
+
+                @media (min-width: $desc1440) {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        &-name{
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(24, 30, 75, 0.7);
+
+            @media (min-width: $desc1025) {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            @media (min-width: $desc1440) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+
+.tabs-block{
+
+
+    &-link{
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+        color: rgba(94, 98, 130, 0.65);
+
+        padding: 10px 15px;
+        position: relative;
+        margin: 0 5px;
+
+        @media (min-width: $desc1440) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #181E4B;
+            transition: width .3s ease;
+        }
+
+
+        &:hover{
+            color: #181E4B;
+        }
+
+        &.active{
+            color: #181E4B;
+
+            &:after{
+                width: 100%;
+                transition: width .3s ease;
+            }
+        }
+    }
+}
+
+
+.tabs-wrapper{
+    position: relative;
+    z-index: 2;
+
+    
+}
+
+.tab-pane{
+    &-author{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            @media (min-width: $desc1440) {
+                width: 65px;
+                height: 65px;
+            }
+        }
+
+        &-info{
+            padding-left: 15px;
+
+            @media (min-width: $desc1440) {
+                padding-left: 20px;
+            }
+
+            i{
+                font-size: 12px;
+                line-height: 16px;
+                color: rgba(94, 98, 130, 0.65);
+                display: block;
+
+
+                @media (min-width: $desc1440) {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        &-name{
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(24, 30, 75, 0.7);
+
+            @media (min-width: $desc1025) {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            @media (min-width: $desc1440) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}

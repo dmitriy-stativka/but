@@ -1,0 +1,195 @@
+.hero_section{
+    position: relative;
+    height: 100%;
+    background: #F8F7FE;
+
+    &-bottom{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(-100%);
+        display: none;
+
+        @media (min-width: $desc1025) {
+            display: block;
+        }
+    }
+
+    .container{
+        max-width: 1280px;
+        
+        @media (min-width: $desc1440) {
+            max-width: 1600px;
+        }
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $red;
+        z-index: 1;
+        max-height: 80%;
+    }
+
+    &:after{
+        content: '';
+        background: url(../../images/top.png) bottom right no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    h1{
+        color: #181E4B;
+
+        .hero{
+            &-words{
+                opacity: 1;
+                position: relative;
+                margin: 0 0 0 10px;
+                display: block;
+                vertical-align: top;
+
+                @media (max-width: $desc1024) {
+                    margin: 0 0 90px 0;
+                    width: 255px;
+                }
+
+                @media (min-width: $tablet768) {
+                    width: 325px;
+                    display: inline-block;
+                }
+            }
+
+            &-span{
+                color: $red;
+                background: url(../../images/word-line.png) no-repeat center center;
+                background-size: contain;
+                opacity: 0;
+                position: absolute;
+                transform: translate3d(0, -50%,0);
+                transition: opacity .6s ease, ease transform .6s;
+    
+                &.active{
+                    opacity: 1;
+                    transform: translate3d(0, 0,0);
+                    transition: opacity .6s ease, ease transform .6s;
+    
+                }
+            }
+        }
+
+        
+    }
+
+    &-content{
+        background: $white;
+        padding: 50px 20px;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 100px 80px rgba(86, 85, 121, 0.02), 0px 64.8148px 46.8519px rgba(86, 85, 121, 0.0151852), 0px 38.5185px 25.4815px rgba(86, 85, 121, 0.0121481), 0px 20px 13px rgba(86, 85, 121, 0.01), 0px 8.14815px 6.51852px rgba(86, 85, 121, 0.00785185), 0px 1.85185px 3.14815px rgba(86, 85, 121, 0.00481481);
+
+     
+
+        @media (min-width: $tablet768) {
+            padding: 70px 30px;
+        }
+
+        @media (min-width: $desc1025) {
+            padding: 100px 50px;
+
+            &-text{
+                flex-basis: 70%;
+                padding-right: 30px;
+            }
+        }
+
+        @media (min-width: $desc1440) {
+            padding: 100px 70px;
+
+            &-text{
+                padding-right: 100px;
+            }
+        }
+
+        &-text{
+            &:only-child{
+
+                @media (min-width: $desc1025) {
+                    margin: 0 auto;
+                    text-align: center;
+                    
+                    .btnBudget{
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+
+        &-span{
+            text-transform: uppercase;
+            color: rgba(94, 98, 130, 0.65);
+            font-size: 18px;
+            font-family: $poppinsMedium500;
+            display: block;
+            margin-bottom: 20px;
+
+            @media (min-width: $desc1440) {
+                font-size: 20px;
+                line-height: 30px; 
+            }
+        }
+
+        p{
+            margin: 30px 0;
+            font-size: 18px;
+            line-height: 27px;
+
+            @media (min-width: $desc1440) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+
+        &-img{
+            display: none;
+            position: relative;
+
+            @media (min-width: $desc1025) {
+                display: block;
+                width: 100%;
+                max-width: 380px;
+
+                img{
+                    width: 100%;
+                    opacity: 0;
+                    transition: opacity .6s ease;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    right: 0;
+
+                    &.active{
+                        opacity: 1;
+                    }
+                }
+            } 
+
+            @media (min-width: $desc1440) {
+                max-width: 500px;
+            }
+        }
+    }
+}

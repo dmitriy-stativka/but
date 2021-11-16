@@ -1,0 +1,120 @@
+.list-features{
+    padding: 50px 0;
+
+    @media (min-width: $desc1025) {
+        padding: 100px 0;
+    }
+
+    &-item{
+        padding: 20px;
+        margin: 50px -20px;
+        display: flex;
+        align-items: center;
+        border-radius: 40px;
+
+        &:first-child{
+            margin-top: 0;
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        @media (max-width: $tablet768) {
+            flex-direction: column;
+            margin: 50px 0;
+            padding: 0;
+        }
+
+        &-text,
+        &-img{
+            padding: 0 20px;
+            flex-basis: 50%;
+        }
+
+        &-text{
+            color: #181E4B;
+            
+            @media (max-width: $tablet768) {
+                order: 2;
+            }
+        }
+
+        &-img{
+            @media (max-width: $tablet768) {
+                order: 1;
+                margin-bottom: 30px;
+            }
+
+            img{
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        p{
+            margin: 25px 0 0 0;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(24, 30, 75, 0.7);
+
+            @media (min-width: $tablet768) {
+                margin: 40px 0 0 0;
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+
+        @media (min-width: $tablet768) {
+            padding: 50px;
+        }
+
+        @media (min-width: $desc1025) {
+            padding: 100px;
+        }
+
+        &_ul{
+            padding: 25px 0;
+
+            img{
+                width: 35px;
+                height: 35px;
+
+                @media (min-width: $desc1025) {
+                    width: 45px;
+                    height: 45px;
+                }
+
+                @media (min-width: $desc1440) {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+
+            @media (min-width: $tablet768) {
+                padding: 40px 0;
+            }
+        }
+
+        &_li{
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+
+            span{
+                display: block;
+                margin-left: 15px;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(24, 30, 75, 0.7);
+
+                @media (min-width: $desc1025) {
+                    font-size: 20px;
+                    line-height: 30px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

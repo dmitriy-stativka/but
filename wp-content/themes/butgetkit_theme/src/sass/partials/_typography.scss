@@ -1,0 +1,72 @@
+.title{
+  &-bold-84{
+    font-size: 84px;
+    line-height: 108px;
+    font-family: $volkovBold;
+
+      @media (max-width: $desc1440) {
+        font-size: 71px;
+        line-height: 90px;
+      }
+
+      @media (max-width: $desc1025) {
+        font-size: 49px;
+        line-height: 64px;
+      }
+
+      @media (max-width: $tablet768) {
+        font-size: 40px;
+        line-height: 50px;
+      }
+  }
+
+
+  &-bold-71{
+    font-size: 62px;
+    line-height: 70px;
+    font-family: $volkovBold;
+
+    @media (max-width: $desc1025) {
+      font-size: 50px;
+      line-height: 64px;
+    }
+
+    @media (max-width: $tablet768) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+  }
+
+  &-bold-50{
+    font-size: 50px;
+    line-height: 64px;
+    font-family: $volkovBold;
+
+    @media (max-width: $desc1440) {
+      font-size: 45px;
+      line-height: 57px;
+    }
+
+    @media (max-width: $tablet768) {
+        font-size: 32px;
+        line-height: 40px;
+      }
+  }
+
+
+
+  &-bold-32{
+    font-size: 32px;
+    line-height: 44px;
+    font-family: $volkovBold;
+  }
+
+
+  &-bold-24{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: $volkovBold;
+  }
+
+}

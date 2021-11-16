@@ -1,0 +1,225 @@
+.testimonials{
+    position: relative;
+    padding: 50px 0;
+    background: url(../../images/testimonials-bg.svg) top right no-repeat;
+    overflow: hidden;
+
+    @media (max-width: $desc1025) {
+        background-position: calc(100% + 130px) 0%;
+    }
+
+    &-img_bg{
+        position: absolute;
+        z-index: -1;
+        top: 100px;
+        right: -35px;
+        bottom: 0;
+        margin: auto;
+        display: none;
+
+        @media (min-width: $desc1440) {
+            display: block;
+        }
+    }
+
+    &-bg{
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-height: 550px;
+        max-width: 600px;
+        width: 100%;
+        height: 100%;
+        object-fit: initial;
+        transform: translate(-110%, 30%);
+    }
+
+    @media (min-width: $desc1025) {
+        padding: 100px 0;
+    }
+
+    &-row{
+        display: flex;
+        margin: 0 -20px;
+        padding-top: 100px;
+        overflow-x: scroll;
+        position: relative;
+        z-index: 99999999999;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    &-top{
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+
+        &:after{
+            content: '';
+            width: 120px;
+            height: 120px;
+            background: #EEF0F6;
+            border-radius: 50%;
+            position: absolute;
+            top: -25px;
+            left: -150px;
+            right: 0;
+            margin: auto;
+            z-index: -1;
+        }
+
+        @media (min-width: $tablet768) {
+            &:after{
+                display: none;
+            }
+        }
+
+
+        @media (min-width: $desc1440) {
+            max-width: 880px;
+
+            &:after{
+                display: block;
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+
+    &-title{
+        color: #181E4B;
+        font-family: $volkovBold;
+        margin-bottom: 40px;
+        font-size: 32px;
+        line-height: 40px;
+
+        @media (min-width: $tablet768) {
+            font-size: 36px;
+            line-height: 47px;
+        }
+
+        @media (min-width: $desc1025) {
+            font-size: 45px;
+            line-height: 57px;
+        }
+
+        @media (min-width: $desc1440) {
+            font-size: 50px;
+            line-height: 64px;
+        }
+    }
+
+    &-desc{
+        color: rgba(24, 30, 75, 0.7);
+        font-size: 16px;
+        line-height: 24px;
+        
+        @media (min-width: $tablet768) {
+            font-size: 17px;
+            line-height: 26px;
+        }
+
+        @media (min-width: $desc1025) {
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        @media (min-width: $desc1440) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    &-item{
+        flex-basis: 33.3%;
+        padding: 0 5px;
+        min-width: 320px;
+
+        @media (min-width: $tablet768) {
+            padding: 0 10px;
+        }
+
+        @media (min-width: $desc1025) {
+            padding: 0 35px;
+        }
+
+        @media (min-width: $desc1440) {
+            padding: 0 50px;
+        }
+
+        &-image{
+            border-radius: 40px;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    &-btn{
+        border: 2px solid #181E4B;
+        box-shadow: 0px 20px 35px rgba(86, 85, 121, 0.15);
+        border-radius: 0px 10px 10px 10px;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 14px 0;
+        color: #181E4B;
+        font-family: $poppinsSemiBold600;
+        width: 100%;
+        margin: 40px auto 0 auto;
+        text-align: center;
+        justify-content: center;
+        transition: border .3s ease, color .3s ease;
+
+        @media (max-width: $desc1024) {
+            max-width: 270px;
+        }
+
+        @media (min-width: $desc1025) {
+            font-size: 24px;
+            line-height: 34px;
+            padding: 23px 0;
+            max-width: 320px;
+        }
+
+        @media (min-width: $desc1440) {
+            font-size: 26px;
+            line-height: 36px;
+            max-width: 330px;
+        }
+
+        svg{
+            max-width: 55px;
+            width: 100%;
+            margin-left: 10px;
+            
+            path{
+                fill: initial;
+                transition: fill .3s ease;
+            }
+        }
+
+        &:hover{
+            border-color: $red;
+            color: $red;
+            transition: all .3s ease;
+
+            path{
+                fill: $red;
+                transition: fill .3s ease;
+            }
+        }
+    }
+}
